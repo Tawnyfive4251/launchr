@@ -9,6 +9,7 @@ from .views import (
     SubscriptionView,
 EmailChangeView,
     YoutubeView,
+    MediaTranscriber
 )
 
 urlpatterns = [
@@ -17,7 +18,11 @@ urlpatterns = [
         view=DashboardView.as_view(),
         name="dashboard"
     ),
-
+    path(
+        route='upload',
+        view=MediaTranscriber,
+        name="media"
+    ),
     path(
         route='account/',
         view=AccountView.as_view(),

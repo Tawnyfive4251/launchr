@@ -22,7 +22,7 @@ RUN apt-get install -y ffmpeg
 RUN apt-get install -y swig
 RUN apt-get install -y libasound2-dev
 # Requirements are installed here to ensure they will be cached.
-
+RUN apt-get install -y python-dev bison autoconf libtool-bin libpulse-dev
 COPY ./requirements /requirements
 RUN pip install -r /requirements/dev.txt
 RUN apt-get install -y rabbitmq-server

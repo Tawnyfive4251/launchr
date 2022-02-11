@@ -13,6 +13,8 @@ import wave
 import os
 # import numpy as np
 import speech_recognition as sr
+from . import models
+
 
 @shared_task(bind=True)
 def debug_task(self):
