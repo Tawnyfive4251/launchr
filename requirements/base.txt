@@ -1,5 +1,14 @@
-django==3.1.5
+django
 psycopg2==2.8.6
 django-allauth==0.43.0
 dj-stripe==2.4.1
 django-recaptcha==2.0.6
+flask
+pytube
+vimeo_downloader
+youtube_transcript_api
+pydub
+celery
+redis
+SpeechRecognition
+PocketSphinx

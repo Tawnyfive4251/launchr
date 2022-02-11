@@ -19,9 +19,13 @@ from django.views.generic import TemplateView, UpdateView
 from djstripe.models import Customer
 from users.forms import AccountForm
 from users.email import subscribe_to_mailing_list, unsubscribe_from_mailing_list
+from django.views.decorators.http import require_http_methods
+
 
 class DashboardView(LoginRequiredMixin, TemplateView):
     template_name = "users/dashboard.html"
+class YoutubeView(LoginRequiredMixin, TemplateView):
+    template_name = "users/youtubeupload.html"
 
 
 class AccountView(LoginRequiredMixin, UpdateView):

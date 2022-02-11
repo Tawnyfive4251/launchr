@@ -8,6 +8,7 @@ from .views import (
     CheckoutView,
     SubscriptionView,
 EmailChangeView,
+    YoutubeView,
 )
 
 urlpatterns = [
@@ -16,6 +17,7 @@ urlpatterns = [
         view=DashboardView.as_view(),
         name="dashboard"
     ),
+
     path(
         route='account/',
         view=AccountView.as_view(),
@@ -46,4 +48,11 @@ urlpatterns = [
         view=CheckoutView.as_view(),
         name="checkout"
     ),
+        
+    path(
+        route='youtube/',
+        view=YoutubeView.as_view(),
+        name="youtube"
+    ),
+    
 ]

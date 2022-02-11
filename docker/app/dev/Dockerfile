@@ -16,9 +16,19 @@ COPY ./docker/app/shared/entrypoint.sh /entrypoint
 RUN sed -i 's/\r$//g' /entrypoint
 RUN chmod +x /entrypoint
 
+RUN apt-get -y update
+RUN apt-get -y upgrade
+RUN apt-get install -y ffmpeg
+RUN apt-get install -y swig
+RUN apt-get install -y libasound2-dev
 # Requirements are installed here to ensure they will be cached.
+
 COPY ./requirements /requirements
 RUN pip install -r /requirements/dev.txt
+RUN apt-get install -y rabbitmq-server
+
+#install ffmpeg
+
 
 WORKDIR /app
 ENTRYPOINT ["/entrypoint"]

@@ -1,0 +1,55 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+  <div class="bg-gradient" style="margin-left: -25px; margin-right: -25px;">
+    <div class="row p-5">
+      <div class="col-md-6">
+        <div class="h5 text-white-50 pt-5">
+          Paste in your YouTube URL below and we'll get to work transcribing it for you!
+        </div>
+        <div class="h1 text-white pb-5">Start AutoScribing,
+          <br/> {{user}}
+        </div>
+
+      </div>
+      <div class="col-md-6 text-center pt-3">
+        <img class="text-white" width="200" height="200" viewBox="0 0 200 200" src="https://voicedocs.com/img/transcriber-girl-medium.png">
+          
+      </div>
+    </div>
+
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12" style="margin-top: 2%;">
+        
+        <div class="dropdown">
+          
+          <label for="filetype-select">Select a file type:    </label>
+          <select name="Select a file type" id="filetype-select" class="btn btn-primary dropdown-toggle">
+            <option value="MP4">MP4</option>
+            <option value="MP3">MP3</option>
+            <option value="WAV">WAV</option>
+
+          </select>
+        </div>
+        <form role="form" style="margin-top: 2%;">
+          <div class="form-group">
+             
+            <label for="exampleInputFile">
+              Upload your File here!
+            </label>
+            <input type="file" class="form-control-file" id="exampleInputFile" />
+            <p class="help-block">
+              supported files: MP4, MP3, WAV
+            </p>
+          </div> 
+          <button type="submit" class="btn btn-primary">
+            Submit
+          </button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

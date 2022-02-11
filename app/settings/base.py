@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'djstripe',
     'captcha',
     'users',
+    'transcriber'
 ]
 
 ########################################
@@ -274,3 +275,4 @@ PLANS = {
 # up Stripe for every development environment. Don't use this
 # in production.
 BYPASS_STRIPE = False
+CELERY_BROKER_URL = 'redis://localhost:6379'

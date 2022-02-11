@@ -7,7 +7,7 @@ from forms import SupportForm
 
 
 class HomeView(TemplateView):
-    template_name = "pages/home.html"
+    template_name = "pages/home2.html"
 
 
 class TermsView(TemplateView):
